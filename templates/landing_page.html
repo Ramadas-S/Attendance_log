@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Welcome to the Staff Management System</h1>
+    <div class="btn-container">
+        <a href="{% url 'add_member' %}" class="btn">Add Staff</a>
+        <a href="{% url 'mark_attendance' %}" class="btn">Mark Attendance</a>
+        <a href="{% url 'attendance_report' %}" class="btn">View Attendance Report</a>
+    </div>
+    
+</body>
+</html>

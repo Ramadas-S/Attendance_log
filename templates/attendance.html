@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Page</title>
+    <title>Attendance</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-
         .container {
             width: 80%;
-            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             margin-top: 30px;
         }
@@ -27,8 +19,6 @@
         h2 {
             color: #333;
             margin-bottom: 20px;
-            font-size: 24px;
-            text-align: center;
         }
 
         form {
@@ -43,22 +33,7 @@
             cursor: pointer;
             font-size: 16px;
         }
-
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        ul li {
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            color: #fff;
-            font-size: 16px;
-        }
-
+        
         .success {
             background-color: #d4edda;
             color: #155724;
@@ -69,16 +44,15 @@
             color: #721c24;
         }
     </style>
-
 </head>
 <body>
-
+        
     <div class="container">
-        <h2>Add Staff Member</h2>
-        <form method="post">
+        <h2>Mark Attendance</h2>
+        <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Add Member</button>
+            <button type="submit">Submit</button>
         </form>
 
         {% if messages %}
@@ -91,6 +65,8 @@
         </ul>
         {% endif %}
     </div>
+ 
+
 
 
 </body>
